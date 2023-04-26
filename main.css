@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-size: calc(65% + vmin);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.desktop-container {
+    display: none;
+}
+
+.mobile-container h1 {
+    padding: 2rem 0;
+    color: #fff;
+}
+
+.mobile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #2f3c4f;
+    box-shadow: 4px 1px 5px 2px #fbb040;
+}
+
+.mobile-container i {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.3rem;
+}
+
+.nav-popup {
+    background-color: #506f86;
+    width: 65%;
+    position: fixed;
+    top: 5rem;
+    right: 0;
+    border-radius: 2px;
+    opacity: 0;
+}
+
+.nav-popup * {
+    color: #ffffff;
+    list-style-type: none;
+    padding: 1rem
+}
+
+.nav-popup a {
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-size: 1.2rem;
+}
+
+.nav-popup a:hover {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.fa-bars {
+    color: #fbb040;
+    font-size: 2rem;
+    border-radius: 5px;
+}
+
+.fa-xmark {
+    background-color: #2f3c4f;
+    color: #fbb040;
+    font-size: 2.8rem;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.show * {
+    opacity: 1;
+    pointer-events: painted;
+    transition: all 0.2s ease-in-out;
+}
+
+/* ------------------- HEADER -------------------- */
+
+header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    background: url(./images/profile.jpg);
+    background-size: cover;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header h2 {
+    margin-bottom: 2rem;
+}
+
+header a {
+    text-decoration: none;
+}
+
+/* ---------------About me-------------------- */
+.aboutme {
+    text-align: center;
+    align-items: center;
+    margin: 2.5rem 1rem;
+    color: #506f86;
+}
+
+.aboutme img {
+    width: 70%;
+    margin-bottom: 2rem;
+    border-radius: 50%
+}
+
+.aboutme h1 {
+    padding: 2rem;
+    font-size: 3.2rem;
+}
+
+.aboutme p {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.section-one-icons i {
+    font-size: 2rem;
+    color: #506f86;
+}
+
+.aboutme button {
+    padding: 1rem 2rem;
+    color: #fff;
+    margin: 2rem 0;
+    background-color: #fbb040;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    border: #fbb040;
+}
+
+
+/* ---------------- What I do ------------- */
+
+.what-i-do {
+    border-top: 5px dashed #fbb040;
+    margin: 3rem 1rem;
+    padding-top: 2rem;
+    color: #506f86;
+}
+
+.what-i-do h2 {
+    font-size: 3.5rem;
+    color: #596e79;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+.what-i-do img {
+    width: 30%;
+}
+
+.what-i-do h3 {
+    font-size: 1.2rem;
+    color: #596e79;
+}
+
+.grid-skills div {
+    display: flex;
+    margin: 1rem 4rem;
+
+}
+
+/* ------------------ My Work ----------------- */
+
+.my-work {
+    margin: 3rem 1rem;
+    color: #596e79;
+    border-top: 5px dashed #fbb040;
+}
+
+.my-work h2 {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    font-size: 3.5rem;
+    text-align: center;
+    color: #596e79;
+}
+
+.my-work a {
+    text-decoration: none;
+    color: #596e79;
+}
+
+.work-list {
+    list-style-type: none;
+    font-size: .7rem;
+    display: flex;
+    justify-content: center;
+}
+
+.work-list li {
+    padding: 0 0.5rem;
+}
+
+.work-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.work-imgs img {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
+.work-imgs li {
+    margin: 1rem 0;
+}
+
+/* ------------------ Contact ----------------- */
+
+.contact {
+    margin: 3rem 1rem;
+    color: #596e79;
+    border-top: 5px dashed #fbb040;
+}
+
+.contact h2 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 25px;
+    background-color: #fbb040;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0062cc;
+}
+
+/* ------------------ Address ----------------- */
+
+.address {
+    margin: 3rem 1rem;
+    color: #596e79;
+    justify-content: center;
+    text-align: center;
+}
+
+.address h2 {
+    font-size: 3rem;
+}
+
+.address h3 {
+    margin-top: 1.5rem;
+}
+
+/* ------------------ Footer ----------------- */
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    background-color: #506f86;
+    color: #fff;
+}
+
+.footer-icons {
+    padding: 2rem;
+}
+
+.footer-icons i {
+    font-size: 2rem;
+    color: #fff;
+    margin: 1rem;
+}
+
+
+/* ---------------- Copyright ---------------- */
+.copyright {
+    background-color: #2f3c4f;
+    width: 100%;
+    height: 80px;
+}
+
+.copyright p {
+    font-size: 0.9rem;
+}
+
+.copyright p {
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media only screen and (min-device-width: 768px) {
+    /* --------------- About me ---------------- */
+
+    .aboutme img {
+        width: 35%;
+    }
+
+    .aboutme p {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    /* ---------------- What I do ------------- */
+    .grid-skills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3px;
+    }
+
+    .grid-skills>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-skills img {
+        width: 30%;
+    }
+
+
+    /* ------------------ My Work ----------------- */
+
+    .my-work h2 {
+        font-size: 5rem;
+    }
+
+    .work-list {
+        list-style-type: none;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .work-imgs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    /* ------------------ Contact ----------------- */
+
+    .contact h2 {
+        font-size: 5rem;
+    }
+
+    textarea {
+        font-size: 2.5rem;
+    }
+
+    /* ------------------ Address ----------------- */
+
+    .address h2 {
+        font-size: 5rem;
+    }
+
+    .address h3 {
+        font-size: 2rem;
+    }
+
+    .address p {
+        font-size: 1.5rem;
+    }
+
+
+
+    @media only screen and (min-device-width: 1024px) {
+
+        body {
+            margin-left: 16rem;
+        }
+
+        .mobile-container {
+            display: none;
+        }
+
+        .desktop-container {
+            display: block;
+            height: 100%;
+            width: 16rem;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #2f3c4f;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .desktop-container-flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .desktop-container-flex h1 {
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        .desktop-container-flex h2 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .desktop-container-flex li {
+            list-style-type: none;
+            margin-bottom: 2rem;
+        }
+
+        .desktop-container-flex a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .desktop-container img {
+            margin-top: 2rem;
+            width: 60%;
+            border-radius: 50%;
+            border: 8px solid #506f86;
+        }
+
+        .icons-nav-list {
+            align-items: center;
+            text-align: center;
+        }
+
+        .desktop-container i {
+            margin-top: 1rem;
+            padding: 0 1rem;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+        /* --------------- About me ---------------- */
+
+        .aboutme {
+            margin: 0 4rem;
+        }
+
+        .aboutme img {
+            display: none;
+        }
+
+        .aboutme p {
+            font-size: 1rem;
+        }
+
+        .section-one-icons i {
+            padding: 0 1.3rem;
+        }
+
+        /* --------------- My Work ---------------- */
+
+        .my-work h2 {
+            font-size: 3rem;
+        }
+
+        /* --------------- Contact ---------------- */
+
+        .contact-cover {
+            display: flex;
+            margin: 0 2rem;
+            border-top: 5px dashed #fbb040;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact {
+            margin: 3rem 1rem;
+            color: #596e79;
+            border-top: 5px dashed #fbb040;
+        }
+
+        .contact {
+            border-top: 5px dashed #fff;
+        }
+
+        .contact-cover h2 {
+            font-size: 3rem;
+        }
+
+        .address h2 {
+            display: none;
+        }
+
+        .address p {
+            font-size: 1rem;
+        }
+    }
