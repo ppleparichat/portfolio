@@ -10,3 +10,4 @@ eyeIcon.addEventListener("click", () => {
     passwordEl.setAttribute("type", "password");
   }
 });
+
