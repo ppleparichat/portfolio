@@ -60,8 +60,8 @@ function scrollToTopFunc() {
 
 
 
-const API_KEY = "AIzaSyDG6vUQm7TeG9XHoEZuy-EDWlrIRZnm65Y";
-const CHANNEL_ID = "UCaUVKfDRB7s6EbabI5d9AhA";
+const API_KEY = "555";
+const CHANNEL_ID = "555";
 
 // Make an API request to fetch the latest videos from your channel
 fetch(
@@ -106,10 +106,10 @@ fetch(
     const formData = new FormData(event.target);
     const formBody = new URLSearchParams(formData).toString();
   
-    const response = await fetch('https://formspree.io/f/xdovbnnq', {
+    const response = await fetch('https://formspree.io/f/555', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': '555',
       },
       body: formBody,
     });
