@@ -176,10 +176,14 @@ header a {
     color: #506f86;
 }
 
-.aboutme img {
+.profile-img {
     width: 70%;
     margin-bottom: 2rem;
     border-radius: 50%
+}
+
+.videos img {
+    width: 30%;
 }
 
 .aboutme h1 {

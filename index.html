@@ -9,6 +9,7 @@
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./main.css">
+    
     <title>Parichat Portfolio</title>
 </head>
 
@@ -26,6 +27,7 @@
                 <li><a href="#skills">What I do</a></li>
                 <li><a href="#mywork">My work</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="admin.html">Log in</a></li>
             </ul>
             <div>
                 <i class="fa-solid fa-bars" id="nav-click"></i>
@@ -83,11 +85,14 @@
         <section id="aboutme" class="aboutme">
             <div>
                 <h1>About me</h1>
-                <img src="./images/profile.png">
+                <img class="profile-img" src="./images/profile.png">
                 <h2>I'm Parichat Rodprasert</h2>
                 <p>I'm a web developer with 1 year of experience. I'm passionate about building responsive and
                     user-friendly websites using JavaScript | React | UX/UI.
                 <p>When I'm not coding, you can find me at THINK THAi, Yes I'm Thai teacher.</p>
+
+                <div class="videos" id="video-list"></div>
+
                 <p>Feel free to check out my portfolio and get in touch if you have any questions or would like to work
                     together on a project.</p>
                 </p>
@@ -172,9 +177,9 @@
                 <a href="#">
                     <li>All</li>
                 </a>
-                <a href="#">
+                <!-- <a href="#">
                     <li>HTML & CSS</li>
-                </a>
+                </a> -->
                 <a href="#">
                     <li>Bootstrap</li>
                 </a>
@@ -184,6 +189,9 @@
                 <a href="#">
                     <li>React</li>
                 </a>
+                <a href="#">
+                    <li>Figma</li>
+                </a>
 
             </ul>
             <ul class="work-imgs">
@@ -191,6 +199,7 @@
                 <li><img src="./images/Bootstrap-img.png"></li>
                 <li><img src="./images/snow.png"></li>
                 <li><img src="./images/React-img.png"></li>
+                <li><img src="./images/figma-plants.png"></li>
 
             </ul>
         </section>
@@ -198,15 +207,19 @@
         <div class="contact-cover">
             <section class="contact" id="contact">
                 <h2>Get in Touch</h2>
-                <form>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message"></textarea>
-                    <button type="submit">Send Message</button>
+                <form id="contact-form" method="POST" action="https://formspree.io/f/xdovbnnq">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send</button>
                 </form>
+
             </section>
 
             <section class="address">
@@ -241,7 +254,10 @@
 
 
     <button class="top">&uarr;</button>
+
+
     <script src="./app.js"></script>
+    
 </body>
 
 </html>
