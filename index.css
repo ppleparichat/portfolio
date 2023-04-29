@@ -5,7 +5,6 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-size: calc(65% + vmin);
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -44,6 +43,7 @@
 }
 
 .mobile-container {
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -182,10 +182,6 @@ header a {
     border-radius: 50%
 }
 
-.videos img {
-    width: 30%;
-}
-
 .aboutme h1 {
     padding: 2rem;
     font-size: 3.2rem;
@@ -211,6 +207,14 @@ header a {
     border: #fbb040;
 }
 
+.videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.videos img {
+    width: 60%;
+}
 
 /* ---------------- What I do ------------- */
 
@@ -461,28 +465,32 @@ footer {
         font-size: 1rem;
     }
 
+    .videos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1;
+    }
+
+    .videos img {
+        width: 50%;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+    }
+
     /* ---------------- What I do ------------- */
     .grid-skills {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 3px;
-    }
-
-    .grid-skills>div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr 1fr;
     }
 
     .grid-skills img {
-        width: 30%;
+        width: 20%;
     }
 
 
     /* ------------------ My Work ----------------- */
 
     .my-work h2 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .work-list {
@@ -501,7 +509,7 @@ footer {
     /* ------------------ Contact ----------------- */
 
     .contact h2 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     textarea {
@@ -511,7 +519,7 @@ footer {
     /* ------------------ Address ----------------- */
 
     .address h2 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .address h3 {
@@ -521,7 +529,6 @@ footer {
     .address p {
         font-size: 1.5rem;
     }
-
 
 
     @media only screen and (min-device-width: 1024px) {
@@ -598,13 +605,16 @@ footer {
         }
 
         /* --------------- About me ---------------- */
+        .profile-img {
+            display: none;
+        }
 
         .aboutme {
             margin: 0 4rem;
         }
 
-        .aboutme img {
-            display: none;
+        .videos>img {
+            display: block;
         }
 
         .aboutme p {

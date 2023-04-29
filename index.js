@@ -61,37 +61,15 @@ function scrollToTopFunc() {
 const API_KEY = "555";
 const CHANNEL_ID = "555";
 
-fetch(
-  `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=10`
-)
+fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=6`)
   .then((response) => response.json())
-  .then((data) => {
-
-    console.log(data)
-   
-    const videoItems = data.items.filter(
-      (item) => item.id.kind === "youtube#video"
-    );
-
-    const videoHTML = videoItems
-      .map(
-        (item) => `
-      <div class="video-item">
-        <a href="https://www.youtube.com/watch?v=${item.id.videoId}" target="_blank">
-          <img src="${item.snippet.thumbnails.high.url}" alt="${item.snippet.title}">
-          <h3>${item.snippet.title}</h3>
-        </a>
-      </div>
-    `
-      )
-      .join("");
-
-    
+  .then((data) => {const videoItems = data.items.filter((item) => item.id.kind === "youtube#video");
+  console.log(data)
+    const videoHTML = videoItems.map((item) =>
+      `<a href="https://www.youtube.com/watch?v=${item.id.videoId}" target="_blank">
+          <img src="${item.snippet.thumbnails.high.url}" alt="${item.snippet.title}"></a>`).join("");
     document.querySelector("#video-list").innerHTML = videoHTML;
   })
-  .catch((error) => console.error(error));
-
-
 
  
   const form = document.querySelector('#contact-form');
@@ -102,7 +80,7 @@ fetch(
     const formData = new FormData(event.target);
     const formBody = new URLSearchParams(formData).toString();
   
-    const response = await fetch('5555', {
+    const response = await fetch('555', {
       method: 'POST',
       headers: {
         'Content-Type': '555',
