@@ -58,12 +58,9 @@ function scrollToTopFunc() {
 
 
 
-
-
 const API_KEY = "555";
 const CHANNEL_ID = "555";
 
-// Make an API request to fetch the latest videos from your channel
 fetch(
   `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=10`
 )
@@ -71,12 +68,11 @@ fetch(
   .then((data) => {
 
     console.log(data)
-    // Get the list of video items from the API response
+   
     const videoItems = data.items.filter(
       (item) => item.id.kind === "youtube#video"
     );
 
-    // Create a HTML string for each video item
     const videoHTML = videoItems
       .map(
         (item) => `
@@ -90,7 +86,7 @@ fetch(
       )
       .join("");
 
-    // Display the video HTML on your portfolio page
+    
     document.querySelector("#video-list").innerHTML = videoHTML;
   })
   .catch((error) => console.error(error));
@@ -106,7 +102,7 @@ fetch(
     const formData = new FormData(event.target);
     const formBody = new URLSearchParams(formData).toString();
   
-    const response = await fetch('https://formspree.io/f/555', {
+    const response = await fetch('5555', {
       method: 'POST',
       headers: {
         'Content-Type': '555',

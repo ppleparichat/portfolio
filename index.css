@@ -32,7 +32,7 @@
     display: none;
 }
 
-/* ----------------- Progress Bar -------------------- */
+/* ----------------- Nav Bar -------------------- */
 
 .desktop-container {
     display: none;
@@ -53,7 +53,7 @@
     left: 0;
     right: 0;
     background: #2f3c4f;
-    /* box-shadow: 4px 1px 5px 2px #fbb040; */
+    /* box-shadow: 4px 1px 5px 2px black; */
 }
 
 .mobile-container i {
@@ -110,7 +110,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-/* ------------------- HEADER -------------------- */
+/* ------------------- Header -------------------- */
 
 header {
     display: flex;
@@ -168,7 +168,7 @@ header a {
     display: none;
 }
 
-/* ---------------About me-------------------- */
+/* ----------------- About me -------------------- */
 .aboutme {
     text-align: center;
     align-items: center;
@@ -196,7 +196,7 @@ header a {
     font-size: 0.9rem;
 }
 
-.section-one-icons i {
+.aboutme-icons i {
     font-size: 2rem;
     color: #506f86;
 }
@@ -365,6 +365,7 @@ button[type="submit"]:hover {
 }
 
 /* ------------------ Footer ----------------- */
+
 footer {
     display: flex;
     flex-direction: column;
@@ -388,6 +389,7 @@ footer {
 
 
 /* ---------------- Copyright ---------------- */
+
 .copyright {
     background-color: #2f3c4f;
     width: 100%;
@@ -406,6 +408,7 @@ footer {
 }
 
 /* -----------------Scroll to Top-------------------- */
+
 .top {
     position: fixed;
     bottom: 15rem;
