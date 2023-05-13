@@ -12,8 +12,6 @@ closeBtn.addEventListener("click", () => {
   navPopup.classList.remove("show");
 });
 
-
-
 const progressEl = document.querySelector(".progress");
 window.onscroll = () => scrollProgress();
 
@@ -28,9 +26,6 @@ function scrollProgress() {
 
   progressEl.style.width = percentage + "%";
 }
-
-
-
 
 const scrollBtn = document.querySelector(".top");
 const rootEl = document.documentElement;
@@ -56,43 +51,26 @@ function scrollToTopFunc() {
   });
 }
 
+const form = document.querySelector("#contact-form");
+form.addEventListener("submit", handleSubmit);
 
+async function handleSubmit(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const formBody = new URLSearchParams(formData).toString();
 
-const API_KEY = "555";
-const CHANNEL_ID = "555";
+  const response = await fetch("555", {
+    method: "POST",
+    headers: {
+      "Content-Type": "555",
+    },
+    body: formBody,
+  });
 
-fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=6`)
-  .then((response) => response.json())
-  .then((data) => {const videoItems = data.items.filter((item) => item.id.kind === "youtube#video");
-  console.log(data)
-    const videoHTML = videoItems.map((item) =>
-      `<a href="https://www.youtube.com/watch?v=${item.id.videoId}" target="_blank">
-          <img src="${item.snippet.thumbnails.high.url}" alt="${item.snippet.title}"></a>`).join("");
-    document.querySelector("#video-list").innerHTML = videoHTML;
-  })
-
- 
-  const form = document.querySelector('#contact-form');
-  form.addEventListener('submit', handleSubmit);
-  
-  async function handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const formBody = new URLSearchParams(formData).toString();
-  
-    const response = await fetch('555', {
-      method: 'POST',
-      headers: {
-        'Content-Type': '555',
-      },
-      body: formBody,
-    });
-  
-    if (response.ok) {
-      alert('Thank you for your message!');
-      form.reset();
-    } else {
-      alert('Something went wrong. Please try again later.');
-    }
+  if (response.ok) {
+    alert("Thank you for your message!");
+    form.reset();
+  } else {
+    alert("Something went wrong. Please try again later.");
   }
-  
+}

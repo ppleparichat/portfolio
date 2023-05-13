@@ -207,13 +207,11 @@ header a {
     border: #fbb040;
 }
 
-.videos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.videos img {
-    width: 60%;
+.aboutme a {
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-size: 1.2rem;
+    color: #0062cc;
 }
 
 /* ---------------- What I do ------------- */
@@ -529,137 +527,138 @@ footer {
     .address p {
         font-size: 1.5rem;
     }
+}
 
 
-    @media only screen and (min-device-width: 1024px) {
+@media only screen and (min-device-width: 1024px) {
 
-        body {
-            margin-left: 16rem;
-        }
-
-        .mobile-container {
-            display: none;
-        }
-
-        .desktop-container {
-            display: block;
-            height: 100%;
-            width: 16rem;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #2f3c4f;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
-
-        .desktop-container-flex {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .desktop-container-flex h1 {
-            color: #fff;
-            font-size: 2rem;
-        }
-
-        .desktop-container-flex h2 {
-            color: #fff;
-            font-size: 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .desktop-container-flex li {
-            list-style-type: none;
-            margin-bottom: 2rem;
-        }
-
-        .desktop-container-flex a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1rem;
-        }
-
-        .desktop-container img {
-            margin-top: 2rem;
-            width: 60%;
-            border-radius: 50%;
-            border: 8px solid #506f86;
-        }
-
-        .icons-nav-list {
-            align-items: center;
-            text-align: center;
-        }
-
-        .desktop-container i {
-            margin-top: 1rem;
-            padding: 0 1rem;
-            color: #fff;
-            font-size: 1.5rem;
-        }
-
-        /* --------------- About me ---------------- */
-        .profile-img {
-            display: none;
-        }
-
-        .aboutme {
-            margin: 0 4rem;
-        }
-
-        .videos>img {
-            display: block;
-        }
-
-        .aboutme p {
-            font-size: 1rem;
-        }
-
-        .section-one-icons i {
-            padding: 0 1.3rem;
-        }
-
-        /* --------------- My Work ---------------- */
-
-        .my-work h2 {
-            font-size: 3rem;
-        }
-
-        /* --------------- Contact ---------------- */
-
-        .contact-cover {
-            display: flex;
-            margin: 0 2rem;
-            border-top: 5px dashed #fbb040;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .contact {
-            margin: 3rem 1rem;
-            color: #596e79;
-            border-top: 5px dashed #fbb040;
-        }
-
-        .contact {
-            border-top: 5px dashed #fff;
-        }
-
-        .contact-cover h2 {
-            font-size: 3rem;
-        }
-
-        .address h2 {
-            display: none;
-        }
-
-        .address p {
-            font-size: 1rem;
-        }
+    body {
+        margin-left: 16rem;
     }
+
+    .mobile-container {
+        display: none;
+    }
+
+    .desktop-container {
+        display: block;
+        height: 100%;
+        width: 16rem;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #2f3c4f;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .desktop-container-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .desktop-container-flex h1 {
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    .desktop-container-flex h2 {
+        color: #fff;
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .desktop-container-flex li {
+        list-style-type: none;
+        margin-bottom: 1rem;
+    }
+
+    .desktop-container-flex a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+    }
+
+    .desktop-container img {
+        margin-top: 1rem;
+        width: 60%;
+        border-radius: 50%;
+        border: 8px solid #506f86;
+    }
+
+    .icons-nav-list {
+        align-items: center;
+        text-align: center;
+    }
+
+    .desktop-container i {
+        margin-top: 1rem;
+        padding: 0 1rem;
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    /* --------------- About me ---------------- */
+    .profile-img {
+        display: none;
+    }
+
+    .aboutme {
+        margin: 0 4rem;
+    }
+
+    .videos>img {
+        display: block;
+    }
+
+    .aboutme p {
+        font-size: 1rem;
+    }
+
+    .section-one-icons i {
+        padding: 0 1.3rem;
+    }
+
+    /* --------------- My Work ---------------- */
+
+    .my-work h2 {
+        font-size: 3rem;
+    }
+
+    /* --------------- Contact ---------------- */
+
+    .contact-cover {
+        display: flex;
+        margin: 0 2rem;
+        border-top: 5px dashed #fbb040;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact {
+        margin: 3rem 1rem;
+        color: #596e79;
+        border-top: 5px dashed #fbb040;
+    }
+
+    .contact {
+        border-top: 5px dashed #fff;
+    }
+
+    .contact-cover h2 {
+        font-size: 3rem;
+    }
+
+    .address h2 {
+        display: none;
+    }
+
+    .address p {
+        font-size: 1rem;
+    }
+}
